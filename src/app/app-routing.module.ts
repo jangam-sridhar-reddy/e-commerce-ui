@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { BlankComponent } from './Layout/blank/blank.component';
+import { BlankComponent } from './layout/blank/blank.component';
+import { FullComponent } from './layout/full/full.component';
 
 const routes: Routes = [
   {
@@ -16,8 +15,8 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'about',
-    component: AboutComponent,
+    path: '',
+    component: FullComponent,
   },
   {
     path: '**',

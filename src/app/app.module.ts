@@ -6,8 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
-import { BlankComponent } from './Layout/blank/blank.component';
-import { FullComponent } from './Layout/full/full.component';
+import { BlankComponent } from './layout/blank/blank.component';
+import { FullComponent } from './layout/full/full.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 
