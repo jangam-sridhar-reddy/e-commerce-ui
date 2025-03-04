@@ -1,0 +1,11 @@
+@layer components {
+  .btn.btn-primary {
+    @apply py-1 text-black   transition-colors rounded flex justify-center items-center;
+    @apply border-loginBtn bg-loginBtn border-2 rounded-full;
+    @apply hover:text-black hover:bg-white hover:border-loginBtn;
+
+    &[disabled] {
+      @apply opacity-40 pointer-events-none;
+    }
+  }
+}

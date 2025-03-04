@@ -1,0 +1,32 @@
+<div class="relative">
+  <label [for]="labelFor" class="block">{{ label }}</label>
+  <div class="flex flex-col">
+    <input
+      [type]="type"
+      [id]="labelFor"
+      [formControl]="control"
+      [name]="inputName"
+      class="border border-gray-500 rounded px-4 py-1 outline-none focus:outline-none mt-2 w-full"
+    />
+    <div class="mb-5">
+      <div
+        class="text-sm text-red-600"
+        *ngIf="control?.touched && control?.errors?.['required']"
+      >
+        You must enter a value
+      </div>
+      <div
+        class="text-sm text-red-600"
+        *ngIf="control?.invalid && control?.errors?.['inValidEmailOrPhone']"
+      >
+        {{control?.errors?.['message']}}
+      </div>
+      <div
+        class="text-sm text-red-600"
+        *ngIf="control?.invalid && control?.errors?.['inValidPassword']"
+      >
+        {{control?.errors?.['message']}}
+      </div>
+    </div>
+  </div>
+</div>

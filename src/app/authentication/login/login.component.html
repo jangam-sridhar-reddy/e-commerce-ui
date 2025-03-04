@@ -1,0 +1,50 @@
+<div>
+  <div class="flex items-center gap-1 justify-center">
+    <img
+      src="../assets/logo-512x512.png"
+      class="col-span-2 max-h-32 object-contain lg:col-span-1"
+    />
+    <div class="text-lg">.in</div>
+  </div>
+
+  <div class="w-[350px] mx-auto py-9 px-9 mt-5 border border-gray-500 rounded">
+    <div class="mb-4">
+      <h1 class="text-[32px]">Sign In</h1>
+    </div>
+    <div>
+      <form [formGroup]="form">
+        <app-forminputs
+          label="Email or mobile phone number"
+          type="text"
+          labelFor="emailOrphone"
+          inputName="Email or mobile phone number"
+          formControlName="emailOrphone"
+        ></app-forminputs>
+        <app-forminputs
+          label="Password"
+          type="password"
+          labelFor="password"
+          inputName="password"
+          formControlName="password"
+        ></app-forminputs>
+        <div>
+          <button
+            type="submit"
+            (click)="login()"
+            class="btn btn-primary px-4 w-full"
+          >
+            Log In
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="mt-5 flex gap-1">
+      <span>Don't have an account?</span>
+      <a
+        class="font-medium text-blue-900"
+        routerLink="/authentication/registration"
+        >Sign Up</a
+      >
+    </div>
+  </div>
+</div>
