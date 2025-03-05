@@ -17,6 +17,8 @@ const routes: Routes = [
   {
     path: '',
     component: FullComponent,
+    loadChildren: () =>
+      import('./components/components.module').then((m) => m.ComponentsModule),
   },
   {
     path: '**',
